@@ -21,6 +21,7 @@ const specialCharacters = "!@#$%^&*()-_=+<>";
 // All logic for generating password
 
 function createPassword() {
+  document.getElementById("errorMessage").innerHTML = "";
   let password = "";
 
   // Additional variables
