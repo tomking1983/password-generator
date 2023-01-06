@@ -32,7 +32,7 @@ function createPassword() {
     passwordLength = characterTotal
   } else {
     document.getElementById("errorMessage").innerHTML =
-      "Please enter a number between 8 and 128";
+      "Please enter a valid number of characters between 8 and 128";
   }
   validCharacters = ''
 
