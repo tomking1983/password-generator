@@ -9,7 +9,7 @@ const lowerID = document.getElementById("lowercase");
 const specialID = document.getElementById("special-characters");
 
 // Variables
-let validCharacters;
+let validCharacters = "";
 let password;
 
 // character types
@@ -27,16 +27,14 @@ function createPassword() {
   let characterTotal = parseInt(characterID.value);
   let passwordLength;
 
-  // function determining password length
-  if (characterTotal < 8) {
-    passwordLength = 8;
-  } else if (characterTotal > 128) {
-    passwordLength = 128;
+  // Function determining password length
+  if (characterTotal > 7  && characterTotal <= 128) {
+    passwordLength = characterTotal
   } else {
-    passwordLength = characterTotal;
+    document.getElementById("errorMessage").innerHTML =
+      "Please enter a number between 8 and 128";
   }
-
-
+  validCharacters = ''
 
   // Check to see if numbers are accepted
   if (numberID.checked) {
