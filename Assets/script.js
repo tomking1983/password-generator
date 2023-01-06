@@ -59,7 +59,7 @@ function createPassword() {
   }
 
 // For loop to generate password
-  for (let i = 0; i <= passwordLength; i++) {
+  for (let i = 0; i < passwordLength; i++) {
     let randomNumber = Math.floor(Math.random() * validCharacters.length - 1)
     password += validCharacters.substring(randomNumber,randomNumber + 1)
   }
